@@ -1,0 +1,319 @@
+header,body,nav,h1,ul{
+    margin:0;
+    padding: 0;
+}
+
+
+body{
+    background-color:honeydew!important;
+}
+
+.header{
+    width:100%;
+    height:64px;
+    background:#3a3a3a;
+}
+.nav{
+    width:1170px;
+    height:100%;
+    margin:0 auto;
+    line-height: 64px;
+}
+
+.nav .logo-box{
+    width:145px;
+    height:49px;
+    background: url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1734399865,2383013073&fm=27&gp=0.jpg") no-repeat;
+    background-position: center;
+    background-size:100%;
+    margin-top: 11px;
+    float:left;
+}
+
+.nav .menu{
+    float:left;
+    margin-left: 100px;
+    overflow: hidden;
+}
+
+.menu li{
+    float:left;
+    margin-left: 40px;
+    list-style: none;
+    box-sizing: border-box;
+    height:64px;
+}
+
+.menu li.active{
+    border-bottom: 4px solid #5b86db;
+}
+
+.menu li a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.auth-group{
+    float:right;
+}
+
+.auth-group a{
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.auth-group span{
+    color:#fff;
+    font-size: 20px;
+}
+
+.main{
+    width:1170px;
+    margin:0 auto;
+    overflow: hidden;
+    margin-top:20px;
+}
+
+.main .main-container{
+    float:left;
+    width:795px;
+    /*background:purple;*/
+}
+
+.main .sidebar-container{
+    float: right;
+    width:355px;
+
+}
+
+.main-container .banner{
+    width:100%;
+    overflow: hidden;
+}
+
+.banner img{
+    width:100%;
+    height: 200px !important;
+}
+
+.list-outer-group{
+    margin-top:20px;
+    /*background:#fff;*/
+    height:66px;
+    border-top:1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.list-outer-group .list-tab-group{
+    overflow: hidden;
+}
+
+.list-tab-group li{
+    float:left;
+    margin-right:20px;
+    list-style: none;
+    line-height: 66px;
+    font-size: 16px;
+}
+
+/* li:first-of-type 选中第一个li标签 */
+.list-tab-group li:first-of-type a{
+    border-left:3px solid #5b86db;
+    padding-left:10px;
+}
+
+.list-tab-group li.active a{
+    color:#212121;
+}
+
+.list-tab-group li a{
+    color: #878787;
+    text-decoration: none;
+
+}
+
+/*--------新闻列表样式--------*/
+.news-list-group{
+    padding:20px;
+}
+
+.news-list-group li{
+    overflow: hidden;
+    padding-bottom:20px;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 20px;
+}
+
+.news-list-group li .thumbnail-group{
+    float:left;
+    width:224px;
+    height:160px;
+}
+
+.thumbnail-group img{
+    width:100%;
+    height: 100%;
+}
+
+.news-list-group li .news-group{
+    float:right;
+    width:500px;
+    height:160px;
+    position:relative;
+}
+
+
+.news-group .title a{
+    font-size: 22px;
+    color:#212121;
+    text-decoration: none;
+}
+.news-group .title a:hover{
+    color:#5b86db;
+}
+
+
+
+.news-group .desc {
+    margin-top: 20px;
+}
+.news-group .desc a{
+    color: #878787;
+    font-size: 14px;
+    text-decoration: none !important;
+}
+
+.news-group .news-more-group{
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+.news-group .news-more-group .pub-time,.author{
+ float:right;
+}
+
+.news-group .news-more-group .author{
+    margin-right:20px;
+}
+
+.news-more-group .category{
+    color:#5b86db;
+}
+
+.load-more-group{
+    margin-top:10px;
+    text-align:center;
+}
+
+.load-more-group .load-more-btn{
+    width:400px;
+    height:40px;
+    color:#6d85ac;
+    background:#d2deca;
+    border:none;
+}
+/*--------新闻列表样式--------*/
+
+/*----------footer的样式-------*/
+.footer{
+    width:100%;
+    margin-top:40px;
+}
+.footer .footer-1{
+    width:100%;
+    height:100px;
+    background:#555e68;
+}
+.footer-1 .footer-inner{
+    width:1170px;
+    margin:0 auto;
+    overflow: hidden;
+    color:#c9c9c9;
+    font-size:14px;
+    background-color:#555e68;
+}
+.footer-inner .logo-box{
+    width:168px;
+    height:54px;
+    background:url("https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1734399865,2383013073&fm=27&gp=0.jpg");
+    background-position:0px -40px;
+    background-size:100%;
+    margin-top:20px;
+    float:left;
+}
+.footer-inner .detail-info-group{
+    float:left;
+    margin-left:80px;
+    margin-top:20px;
+}
+.detail-info-group .top-group{
+    overflow: hidden;
+    background:#555e68;
+}
+.links li{
+    float:left;
+    list-style: none;
+    background-color:#555e68;
+    padding-right: 10px;
+    padding-left:10px;
+    border-right:1px solid #c9c9c9;
+}
+.links li:first-of-type{
+    padding-left:0;
+}
+.links li:last-of-type{
+    border:none;
+}
+.links li a{
+    color:#c9c9c9;
+    font-size:14px;
+    text-decoration: none;
+}
+.top-group .links{
+    overflow: hidden;
+    float:left;
+}
+
+.detail-info-group .about-us{
+    float:right;
+    margin-left:40px;
+}
+
+.about-us .weixin{
+    padding-left:20px;
+    background:url("http://xfz.cn/static/build/images/wx-icon.png");
+    background-repeat: no-repeat;
+    background-size: 30%;
+}
+.about-us .weibo{
+    margin-left:20px;
+    padding-left:25px;
+    background:url("https://www.bufanbiz.com/static/build/images/xl-icon.png") no-repeat;
+    background-size:20%;
+}
+
+.detail-info-group .bottom-group{
+    overflow: hidden;
+}
+.bottom-group .address{
+    folat:left;
+    display:inline-block;
+    margin-right:20px;
+}
+.bottom-group .kfTel{
+    float:right;
+}
+
+.footer .footer-2{
+    widht:100%;
+    height:58px;
+    background:#383e44;
+    color:#c9c9c9;
+    font-size:14px;
+}
+.footer-2 .in-mo,.in-pc{
+    text-align: center;
+}
+/*----------footer的样式-------*/

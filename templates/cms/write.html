@@ -1,0 +1,75 @@
+{% extends 'cms/base.html' %}
+
+{% block title %}
+发布新闻
+{% endblock %}
+
+{% block head %}
+    <!--上传七牛js文件-->
+    <script src="https://unpkg.com/qiniu-js@2.4.0/dist/qiniu.min.js">
+    </script>
+    <!--上传ueditor的js文件-->
+    <script src="{% static 'ueditor/ueditor.config.js' %}"></script>
+    <script src="{% static 'ueditor/ueditor.all.min.js' %}"></script>
+    <script src="{% static 'js/write_news.js' %}"></script>
+{% endblock %}
+
+{% block content-header %}
+<h1>发布新闻</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <form action="" method="post">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="title-form">标题</label>
+                        <input type="text" name="title"
+                               id="title-form" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="desc-from">描述</label>
+                        <input type="text" class="form-control"
+                               name="desc" id="desc-from">
+                    </div>
+                    <div class="form-group">
+                        <label for="category-from">分类</label>
+                        <select class="form-control" name="category" id="category-from">
+                            {% if news_categorys %}
+                                {% for new_category in news_categorys %}
+                                    <option value="{{ new_category.pk }}">{{ new_category.name }}</option>
+                                {% endfor %}
+                            {% else %}
+                                <option value="">暂无新闻分类</option>
+                            {% endif %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="thumbnail-form">缩略图</label>
+                        <div class="input-group">
+                            <input type="text" name="thumbnail"
+                               class="form-control" id="thumbnail-form">
+                            <span class="input-group-btn">
+                                <label class="btn btn-default btn-file">
+                                    上传图片<input hidden type="file" class="btn btn-default" value="上传图片"
+                                id="upload-btn">
+                                </label>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="editor">内容</label>
+                        <script id="editor" type="text/plain"></script>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <button id="submit-btn" class="btn btn-primaty pull-right">发布</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock%}

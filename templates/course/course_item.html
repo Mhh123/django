@@ -1,0 +1,24 @@
+{% verbatim %}
+    {{ each courses value i}}
+        <li>
+            <div class="thumbnail-group">
+                <a href="/news/news_detail/{{ value.id }}/">
+                    <img src="{{ value.thumbnail }}" alt="">
+                </a>
+            </div>
+            <div class="content-group">
+                <p class="title-group">
+                    <a href="/news/news_detail/{{ value.id }}/">
+                        {{ value.title }}
+                    </a>
+                </p>
+                <p class="desc-group">{{ value.desc }}</p>
+                <div class="content-footer">
+                    <span class="category-group">{{ value.category.name }}</span>
+                    <span class="time-group">{{ value.create_time }}</span>
+                    <span class="author-group">{{ value.author }}</span>
+                </div>
+            </div>
+        </li>
+    {{ /each }}
+{% endverbatim %}
